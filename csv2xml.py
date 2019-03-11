@@ -11,7 +11,7 @@ import pandas as pd
 #def convert(indicator_file, freq, ref_area, series, reporting_type, unit_measure,
  #           unit_multiplier, obs_status):
     
-indicator_file='indicator_1-2-1 - Copy.csv'
+indicator_file='indicator_1-2-1'
 freq= 'A'
 ref_area= '826'
 series= 'SI_POV_NAHC'
@@ -20,10 +20,10 @@ unit_measure= 'PERCENT'
 unit_multiplier= '0'
 obs_status= 'A'    
 # import indicator
-indicator=pd.read_csv("//nsdata2/SDGs/Data Collection and Reporting/Jemalex/SDMX/test indicator/"+indicator_file)
+indicator=pd.read_csv(indicator_file)
 
 # import mapping
-mapping=pd.read_csv("//nsdata2/SDGs/Data Collection and Reporting/Jemalex/SDMX/test indicator/Outputs/121_mapping.csv")
+mapping=pd.read_csv("121_mapping.csv")
 
 dis_values={"FREQ":freq, "REF_AREA":ref_area, "SERIES":series, "REPORTING_TYPE": reporting_type,
             'UNIT_MEASURE': unit_measure, 'UNIT_MULT': unit_multiplier, 'OBS_STATUS': obs_status}
